@@ -2,7 +2,7 @@ package datatypes;
 
 public class Constants {
 
-    public static final double golden = (1 + Math.sqrt(5)) / 2;
+    public static final double GOLDEN_NUM = (1 + Math.sqrt(5)) / 2;
     public final byte zero = 0;
     public final short one = 1;
     public final double pi = Math.PI;
@@ -22,7 +22,7 @@ public class Constants {
         System.out.println("* i,the imaginary unit such that " + constants.elevate);
         System.out.println("* √2(square root of 2), the lenght of the diagonal of a square with\n" +
                 "unit sides, approximately equal to " + constants.root);
-        System.out.println(constants.fi + "(golden ratio),approximately equal to " + constants.golden + " or algebraically," + constants.one + "+√5/2");
+        System.out.println(constants.fi + "(golden ratio),approximately equal to " + constants.GOLDEN_NUM + " or algebraically," + constants.one + "+√5/2");
     }
 
 
