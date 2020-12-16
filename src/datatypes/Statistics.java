@@ -20,4 +20,9 @@ public class Statistics {
 
 
     }
+
+    public void refresh() {
+        //connect to internet
+        wrldppl = 78546154321L;
+    }
 }
