@@ -6,7 +6,6 @@ public class Constants {
     public final byte zero = 0;
     public final short one = 1;
     public final double pi = Math.PI;
-    public final double iii = 2.718281828459045235360287;
     public final double root = Math.sqrt(2);
     public String elevate = "i²=-1";
     public char fi = 966;
