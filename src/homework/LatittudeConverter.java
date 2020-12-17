@@ -2,7 +2,7 @@ package homework;
 
 import java.util.Scanner;
 
-public class LatitudeInDecimal {
+public class LatittudeConverter {
     public static void main(String[] args) {
 
         double latitude;
@@ -20,7 +20,7 @@ public class LatitudeInDecimal {
 
         latitude = degrees + minutes / 60 + seconds / 3600;
 
-        System.out.print(degrees + " degrees, " + minutes + " minutes, " + seconds + " seconds = " + latitude);
+        System.out.printf(degrees + " degrees, " + minutes + " minutes, " + seconds + " seconds = %.4f%n", latitude);
 
 
     }
