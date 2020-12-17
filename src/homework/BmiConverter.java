@@ -17,7 +17,7 @@ public class BmiConverter {
         double inches = feet * 12;
         double meters = inches * 0.0254;
         double kilograms = pounds / 2.2;
-        double bmi = kilograms / Math.sqrt(meters);
+        double bmi = kilograms / Math.pow(meters, 2);
 
         System.out.print("The Body Mass Index (BMI) is: " + bmi + " kg/m2");
     }
