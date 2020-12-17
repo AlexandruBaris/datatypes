@@ -2,7 +2,7 @@ package homework;
 
 import java.util.Scanner;
 
-public class LatittudeConverter {
+public class LatitudeConverter {
     public static void main(String[] args) {
 
         double latitude;
