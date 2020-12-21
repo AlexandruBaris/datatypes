@@ -3,12 +3,14 @@ package homework2;
 import java.util.Scanner;
 
 public class LitersPerKilometersCalculator {
-    public static double calculator(double distance, double liters) {
+    public static double calculateconsumption(double distance, double liters) {
         return distance / liters;
 
     }
 
     public static void main(String[] args) {
+
+        final long DISTANCE_CONSUMPTION_KM = 100;
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the distance in km: ");
@@ -17,9 +19,9 @@ public class LitersPerKilometersCalculator {
         System.out.print("Enter the total liters consumption: ");
         int liters = scanner.nextInt();
 
-        double total = 100 / calculator(distance, liters);
+        double consumedLiters = DISTANCE_CONSUMPTION_KM / calculateconsumption(distance, liters);
 
-        System.out.print("Total consumption per 100 km is: " + total + "l/km");
+        System.out.print("Total consumption per 100 km is: " + consumedLiters + "l/km");
 
     }
 }
