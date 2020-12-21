@@ -23,5 +23,6 @@ public class LitersPerKilometersCalculator {
 
         System.out.print("Total consumption per 100 km is: " + consumedLiters + "l/km");
 
+
     }
 }
