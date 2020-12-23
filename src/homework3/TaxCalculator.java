@@ -10,8 +10,8 @@ public class TaxCalculator {
         System.out.print("Enter the amount of money in dollars and cents: ");
         double amount = scanner.nextDouble();
 
-        double addingTax = amount * 0.05;
-        double taxIncluded = amount + addingTax;
+        double taxCalculator = amount * 0.05;
+        double taxIncluded = amount + taxCalculator;
 
         System.out.printf("%.2f", taxIncluded);
 
