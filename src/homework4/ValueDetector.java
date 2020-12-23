@@ -4,9 +4,23 @@ import java.util.Scanner;
 
 public class ValueDetector {
 
+    static int zero;
+    static int positiveNumber;
+    static int negativeNumber;
+
+    public static void numbersCounter(int n) {
+        if (n == 0) {
+            zero += 1;
+        } else if (n > 0) {
+            positiveNumber += 1;
+        } else {
+            negativeNumber += 1;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input 5 numbers (Press Enter after each) : ");
+        System.out.println("Input 5 numbers (Positive,zero or negative; Press Enter after each) : ");
         int n1, n2, n3, n4, n5;
         n1 = scanner.nextInt();
         n2 = scanner.nextInt();
@@ -14,45 +28,12 @@ public class ValueDetector {
         n4 = scanner.nextInt();
         n5 = scanner.nextInt();
 
-        if (n1 > 0) {
-            System.out.println(n1 + " - is positive");
-        } else if (n1 == 0) {
-            System.out.println(n1 + " - zero");
-        } else {
-            System.out.println(n1 + " - is negative");
-        }
+        numbersCounter(n1);
+        numbersCounter(n2);
+        numbersCounter(n3);
+        numbersCounter(n4);
+        numbersCounter(n5);
 
-        if (n2 > 0) {
-            System.out.println(n2 + " - is positive");
-        } else if (n2 == 0) {
-            System.out.println(n2 + " - zero");
-        } else {
-            System.out.println(n2 + " - is negative");
-        }
-
-        if (n3 > 0) {
-            System.out.println(n3 + " - is positive");
-        } else if (n3 == 0) {
-            System.out.println(n3 + " - zero");
-        } else {
-            System.out.println(n3 + " - is negative");
-        }
-
-        if (n4 > 0) {
-            System.out.println(n4 + " - is positive");
-        } else if (n4 == 0) {
-            System.out.println(n4 + " - zero");
-        } else {
-            System.out.println(n4 + " - is negative");
-        }
-
-        if (n5 > 0) {
-            System.out.println(n5 + " - is positive");
-        } else if (n5 == 0) {
-            System.out.println(n5 + " - zero");
-        } else {
-            System.out.println(n5 + " - is negative");
-        }
-
+        System.out.println(zero + " of zero\n" + positiveNumber + " positive number(s)\n" + negativeNumber + " negative number(s)");
     }
 }
