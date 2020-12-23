@@ -20,5 +20,6 @@ public class SecondsConverter {
         long seconds = ((input % (HOURS_IN_DAY * (MINUTES_IN_AN_HOUR * MINUTES_IN_AN_HOUR))) % (MINUTES_IN_AN_HOUR * SECONDS_IN_A_MINUTE)) % SECONDS_IN_A_MINUTE;
 
         System.out.println(input + " seconds = " + days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
+
     }
 }
