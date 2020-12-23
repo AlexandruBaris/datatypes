@@ -2,7 +2,7 @@ package homework3;
 
 import java.util.Scanner;
 
-public class TotalAmountDivider {
+public class AmountDivider {
 
     final static long TWENTY_BILLS = 20;
     final static long TEN_BILLS = 10;
