@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class ValueDetector {
 
-    static int zero;
-    static int positiveNumber;
-    static int negativeNumber;
+    static int numberOfZeros;
+    static int numberOfPoistives;
+    static int numberOfNegatives;
 
-    public static void numbersCounter(int n) {
+    public static void checkNumber(int n) {
         if (n == 0) {
-            zero += 1;
+            numberOfZeros += 1;
         } else if (n > 0) {
-            positiveNumber += 1;
+            numberOfPoistives += 1;
         } else {
-            negativeNumber += 1;
+            numberOfNegatives += 1;
         }
     }
 
@@ -28,12 +28,12 @@ public class ValueDetector {
         n4 = scanner.nextInt();
         n5 = scanner.nextInt();
 
-        numbersCounter(n1);
-        numbersCounter(n2);
-        numbersCounter(n3);
-        numbersCounter(n4);
-        numbersCounter(n5);
+        checkNumber(n1);
+        checkNumber(n2);
+        checkNumber(n3);
+        checkNumber(n4);
+        checkNumber(n5);
 
-        System.out.println(zero + " of zero\n" + positiveNumber + " positive number(s)\n" + negativeNumber + " negative number(s)");
+        System.out.println(numberOfZeros + " of zero\n" + numberOfPoistives + " positive number(s)\n" + numberOfNegatives + " negative number(s)");
     }
 }
