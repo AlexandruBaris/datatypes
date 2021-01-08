@@ -16,7 +16,7 @@ public class DistanceTraveledCalculator {
             System.out.print("Enter the number of hours it has traveled: ");
             time = scanner.nextInt();
         }
-        System.out.println("Hours\tDistance traveled\n-------------------------");
+        System.out.println("\n" + "Hours\tDistance traveled\n-------------------------");
         for (int hour = 1; hour <= time; hour++) {
             double distance = speed * hour;
             System.out.println(hour + "\t\t" + distance);
