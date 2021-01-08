@@ -1,6 +1,6 @@
 package homework7;
 
-public class ProductOfOddDemo {
+public class ProductOfOddCalculator {
     public static void main(String[] args) {
 
         int product = 1;
