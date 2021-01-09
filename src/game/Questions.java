@@ -19,9 +19,9 @@ public class Questions {
 
     public static final String LEVEL_1_QUESTION_3 = "Who cut off his ear?";
     public static final String LEVEL_1_QUESTION_3_ANSWER_1 = "Rafael";
-    public static final String LEVEL_1_QUESTION_3_CORRECT_ANSWER_2 = "Vincent van Gogh";
+    public static final String LEVEL_1_QUESTION_3_CORRECT_ANSWER_2 = "Van Gogh";
     public static final String LEVEL_1_QUESTION_3_ANSWER_3 = "Michelangelo";
-    public static final String LEVEL_1_QUESTION_3_ANSWER_4 = "Pablo Piacsso";
+    public static final String LEVEL_1_QUESTION_3_ANSWER_4 = "Piacsso";
     public static final int LEVEL_1_QUESTION_3_SCORE = 200;
 
 
@@ -54,7 +54,7 @@ public class Questions {
     public static final String LEVEL_3_QUESTION_1_ANSWER_2 = "600";
     public static final String LEVEL_3_QUESTION_1_ANSWER_3 = "<600";
     public static final String LEVEL_3_QUESTION_1_ANSWER_4 = "365";
-    public static final int LEVEL_3_QUESTION_1_SCORE = 300;
+    public static final int LEVEL_3_QUESTION_1_SCORE = 200;
 
 
     public static final String LEVEL_3_QUESTION_2 = "Which is the formula of Vodka?";
@@ -62,7 +62,7 @@ public class Questions {
     public static final String LEVEL_3_QUESTION_2_ANSWER_2 = "H20";
     public static final String LEVEL_3_QUESTION_2_ANSWER_3 = "CO2P5";
     public static final String LEVEL_3_QUESTION_2_ANSWER_4 = "CA3O2";
-    public static final int LEVEL_3_QUESTION_2_SCORE = 300;
+    public static final int LEVEL_3_QUESTION_2_SCORE = 250;
 
 
     public static final String LEVEL_3_QUESTION_3 = "Which is the second highest peak in the world?";
