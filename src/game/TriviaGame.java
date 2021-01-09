@@ -111,6 +111,8 @@ public class TriviaGame {
                         break;
                 }
                 String response = scanner.nextLine();
+
+
                 if (correctAnswer.equalsIgnoreCase(response)) {
                     questionNum++;
                     actualScore += questionScore;
