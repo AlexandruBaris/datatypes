@@ -6,38 +6,23 @@ public class BarChartPrinting {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num1, num2, num3, num4, num5;
-
-
-        System.out.print("Enter a number between 1 and 30: ");
+        System.out.print("Enter 5 numbers between 1 and 30: ");
         num1 = scanner.nextInt();
-        System.out.print("Enter a number between 1 and 30: ");
         num2 = scanner.nextInt();
-        System.out.print("Enter a number between 1 and 30: ");
         num3 = scanner.nextInt();
-        System.out.print("Enter a number between 1 and 30: ");
         num4 = scanner.nextInt();
-        System.out.print("Enter a number between 1 and 30: ");
         num5 = scanner.nextInt();
+        asteriskCalculator(num1);
+        asteriskCalculator(num2);
+        asteriskCalculator(num3);
+        asteriskCalculator(num4);
+        asteriskCalculator(num5);
+    }
 
-        for (int i = 1; i <= num1; i++) {
+    public static void asteriskCalculator(int number) {
+        for (int i = 0; i < number; i++) {
             System.out.print("*");
         }
-        System.out.println("");
-        for (int i = 1; i <= num2; i++) {
-            System.out.print("*");
-        }
-        System.out.println("");
-        for (int i = 1; i <= num3; i++) {
-            System.out.print("*");
-        }
-        System.out.println("");
-        for (int i = 1; i <= num4; i++) {
-            System.out.print("*");
-        }
-        System.out.println("");
-        for (int i = 1; i <= num5; i++) {
-            System.out.print("*");
-        }
-
+        System.out.println();
     }
 }
