@@ -16,8 +16,8 @@ public class TriviaGame {
         System.out.println();
 
         if (decision.equalsIgnoreCase("START")) {
-
             do {
+                //System.out.print("///\tYou have 3 help options: H1 - (50/50); H2 - Ask a friend; H3 - Ask auditory\t\\\\\\\n");
                 switch (questionNum) {
                     case 1:
                         System.out.println(Questions.LEVEL_1_QUESTION_1);
@@ -25,7 +25,7 @@ public class TriviaGame {
                         System.out.println(Questions.LEVEL_1_QUESTION_1_ANSWER_2);
                         System.out.println(Questions.LEVEL_1_QUESTION_1_ANSWER_3);
                         System.out.println(Questions.LEVEL_1_QUESTION_1_ANSWER_4);
-                        System.out.print("\nAnswer: ");
+                        //System.out.println("\nAnswer: ");
                         correctAnswer = Questions.LEVEL_1_QUESTION_1_CORRECT_ANSWER_1;
                         questionScore = Questions.LEVEL_1_QUESTION_1_SCORE;
                         break;
@@ -105,11 +105,13 @@ public class TriviaGame {
                         System.out.println(Questions.LEVEL_3_QUESTION_3_ANSWER_2);
                         System.out.println(Questions.LEVEL_3_QUESTION_3_ANSWER_3);
                         System.out.println(Questions.LEVEL_3_QUESTION_3_CORRECT_ANSWER_4);
-                        System.out.print("\nAnswer: ");
+                        System.out.print("Answer: ");
                         correctAnswer = Questions.LEVEL_3_QUESTION_3_CORRECT_ANSWER_4;
                         questionScore = Questions.LEVEL_3_QUESTION_3_SCORE;
                         break;
                 }
+                System.out.print("///\tYou have 3 help options: H1 - (50/50); H2 - Ask a friend; H3 - Ask auditory\t\\\\\\\n");
+                System.out.print("Answer: ");
                 String response = scanner.nextLine();
 
 
@@ -129,4 +131,5 @@ public class TriviaGame {
         } else if (decision.equalsIgnoreCase("EXIT")) System.out.println("See you soon.");
     }
 }
+
 // 50:50   friend call 100%  auditory help
