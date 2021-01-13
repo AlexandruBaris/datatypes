@@ -1,7 +1,9 @@
 package homework8;
 
 public class Test {
-    public static void piCalculator() {
+
+
+    public static double getValue() {
         int repetition = 200000, odd = 1;
         double pi = 0;
         // for(int i = 1; i<= repetition; i++) alterativa de vazut valoare la 200000 de repetari;
@@ -15,9 +17,10 @@ public class Test {
             odd += 2;
             pi += currentStatus;
             if (pi == Math.PI) {
-                System.out.printf(i + " %.5f", pi);
+                // System.out.printf(i + " %.5f", pi);
                 break;
             }
         }
+        return pi;
     }
 }
