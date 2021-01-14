@@ -1,6 +1,6 @@
 package homework8;
 
-public class Test {
+public class PiCalculator {
 
 
     public static double getValue() {
