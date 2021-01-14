@@ -9,6 +9,7 @@ public class DemoNumbers {
             }
             if (line % 10 == 0) {
                 System.out.println();
+                line++;
             }
             number++;
         }
