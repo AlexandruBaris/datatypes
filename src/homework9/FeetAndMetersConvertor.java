@@ -1,24 +1,26 @@
 package homework9;
 
 public class FeetAndMetersConvertor {
+    public static double FEET_TO_METER = 0.305;
+    public static double METER_TO_FEET = 3.279;
+
     public static void main(String... args) {
-        double feet, meters;
-        System.out.println("Feet     Meters     |     Meters     Feet\n" +
+        System.out.println("Feet     Meters      |     Meters     Feet\n" +
                 "----------------------------------------------");
-        for (feet = 1, meters = 20; feet <= 10; feet++, meters += 5) {
-            System.out.printf("%4.1f     ", feet);
-            System.out.printf("%6.3f", footToMeter(feet));
-            System.out.print("     |     ");
-            System.out.printf("%-11.1f", meters);
-            System.out.printf("%7.3f\n", meterToFoot(meters));
+        double feet = 1.0, meters = 20.0;
+
+        while (feet <= 10) {
+            System.out.printf("%5.1f %10.3f     | %10.1f %10.3f\n", feet, footToMeter(feet), meters, meterToFoot(meters));
+            feet++;
+            meters += 5;
         }
     }
 
     public static double footToMeter(double foot) {
-        return 0.305 * foot;
+        return FEET_TO_METER * foot;
     }
 
     public static double meterToFoot(double meter) {
-        return 3.279 * meter;
+        return METER_TO_FEET * meter;
     }
 }
