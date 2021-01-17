@@ -19,16 +19,16 @@ public class EspGame {
     }
 
     public static void startGame() {
-        int total = 0, correctGuess = 0;
+        int questions = 0, correctGuess = 0;
 
-        while (total < 10) {
+        while (questions < 10) {
             String user = userGuess();
             String computer = getComputerDecision();
             System.out.println("Computer chosed: " + computer);
             if (user.equalsIgnoreCase(computer)) {
                 correctGuess++;
             }
-            total++;
+            questions++;
         }
         System.out.println("You have gotten " + correctGuess + "/10 guesses correct!");
     }
