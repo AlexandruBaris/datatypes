@@ -1,5 +1,6 @@
 package homework10;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public class EspGame {
 
     public static String userGuess() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the color that you think the computer has selected (Red, Green, Blue, Orange, Yellow): ");
+        System.out.print("Enter the color that you think the computer has selected " + Arrays.toString(colors) + ": ");
         return scanner.next().toUpperCase();
     }
 
