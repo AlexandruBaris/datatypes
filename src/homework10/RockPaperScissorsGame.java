@@ -45,9 +45,12 @@ public class RockPaperScissorsGame {
             System.out.println(computerMove.equals(RockPaperScissorsGame.SCISSORS) ? "Computer Wins" : "Player wins");
             System.out.println("You chose: " + playerMove + "\nComputer chose : " + computerMove);
             // if playerMove is SCISSORS
-        } else {
+        } else if (playerMove.equals(RockPaperScissorsGame.SCISSORS)) {
             System.out.println(computerMove.equals(RockPaperScissorsGame.ROCK) ? "Computer Wins" : "Player wins");
             System.out.println("You chose: " + playerMove + "\nComputer chose : " + computerMove);
+        } else {
+            System.out.println("Error! Check your answer!");
+            startGame();
         }
         replay();
     }
