@@ -10,8 +10,6 @@ public class DiceGame {
             counter++;
             if (pcDice() < playerDice()) {
                 playerWin++;
-            } else if (pcDice() == playerDice()) {
-                counter--;
             } else {
                 pcWin++;
             }
@@ -19,8 +17,10 @@ public class DiceGame {
 
         if (playerWin < pcWin) {
             System.out.println("Computer wins with the score: " + pcWin + "/" + playerWin);
-        } else {
+        } else if (playerWin > pcWin) {
             System.out.println("Player wins with the score: " + playerWin + "/" + pcWin);
+        } else {
+            System.out.println("Its a tie: " + playerWin + "/" + pcWin);
         }
     }
 
