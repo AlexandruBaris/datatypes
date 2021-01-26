@@ -10,10 +10,10 @@ public class CheckPassword {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a password: ");
         String password = scanner.next();
-        System.out.println((validation(password) ? "Valid " : "Invalid ") + "Password");
+        System.out.println((validatingPassword(password) ? "Valid " : "Invalid ") + "Password");
     }
 
-    private static boolean validation(String password) {
+    private static boolean validatingPassword(String password) {
         return lengthValidation(password) && onlyLettersAndDigits(password) && hasTwoDigits(password) && upperCaseCheck(password);
     }
 
