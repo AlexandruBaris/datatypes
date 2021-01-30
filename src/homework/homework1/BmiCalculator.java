@@ -1,4 +1,4 @@
-package homework;
+package homework.homework1;
 
 public class BmiCalculator {
     public static double getBmiIndex(double height, double weight) {
