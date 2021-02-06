@@ -1,13 +1,12 @@
-package tasks;
+package homework.homework16;
 
 import java.util.Scanner;
 
-public class Test {
+public class ReversedNumbers {
     public static void main(String... args) {
         Scanner scanner = new Scanner(System.in);
-        new TaskEngine();
-        TaskEngine.run();
 
+        System.out.print("Enter 10 integers: ");
 
     }
 }
