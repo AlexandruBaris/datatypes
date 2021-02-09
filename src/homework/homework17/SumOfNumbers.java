@@ -8,10 +8,10 @@ public class SumOfNumbers {
         System.out.print("Enter a series of numbers separated by commas: ");
         String[] numbers = scanner.next().split(",");
 
-        sumOfDigits(numbers);
+        calculateSumOfDigits(numbers);
     }
 
-    public static void sumOfDigits(String[] numbers) {
+    public static void calculateSumOfDigits(String[] numbers) {
         Integer[] array = new Integer[numbers.length];
         for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(numbers[i]);
