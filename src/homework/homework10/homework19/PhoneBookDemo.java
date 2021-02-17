@@ -1,4 +1,4 @@
-package homework.homework19;
+package homework.homework10.homework19;
 
 import java.util.ArrayList;
 
@@ -15,8 +15,8 @@ public class PhoneBookDemo {
         book.add(user1);
         book.add(user2);
 
-        for (PhoneBook phoneBook : book) {
-            System.out.println(phoneBook);
+        for (PhoneBook i : book) {
+            System.out.println(i);
         }
     }
 }

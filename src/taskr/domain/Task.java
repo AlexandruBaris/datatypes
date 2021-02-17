@@ -2,11 +2,13 @@ package taskr.domain;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
 
 public class Task {
     public String description;
     public String title;
-    public String id;
+    private String id = UUID.randomUUID().toString();
     public List<String> tags;
     public TaskPriority priority;
 
@@ -79,5 +81,27 @@ public class Task {
         this.endDate = endDate;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, description, tags, priority, startDate, endDate);
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Task task = (Task) o;
+        return Objects.equals(id, task.id) && Objects.equals(title, task.title) && Objects.equals(description, task.description) && Objects.equals(tags, task.tags) && priority == task.priority && Objects.equals(startDate, task.startDate) && Objects.equals(endDate, task.endDate);
+    }
+
+
+    @Override
+    public String toString() {
+        return "* " + title + '\'' +
+                " - '" + description + '\'' +
+                " - [" + priority +
+                "], [" + startDate +
+                " to " + endDate +
+                "]. Tags=" + tags;
+    }
 }

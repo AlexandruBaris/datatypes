@@ -17,6 +17,13 @@ public class TestClass {
         };
     }
 
+    public static StringBuilder smash(String... words) {
+        StringBuilder string = new StringBuilder();
+        for (String i : words) {
+            string.append(i).append(" ");
+        }
+        return string;
+    }
 
 }
 
