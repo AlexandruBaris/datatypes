@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 
 public class TaskRepository {
@@ -22,7 +23,39 @@ public class TaskRepository {
     }
 
     public List<Task> findByPriority(TaskPriority priority) {
-        return null;
+        List<Task> list = new ArrayList<>();
+        for (Task t : tasks) {
+            if (t.priority == priority) list.add(t);
+        }
+        return list;
+    }
+
+    public List<Task> findByDate(LocalDate date) {
+        List<Task> list = new ArrayList<>();
+        for (Task t : tasks) if (isBetween(date, t.getStartDate(), t.getEndDate())) list.add(t);
+        return list;
+    }
+
+    private boolean isBetween(LocalDate date, LocalDate startDate, LocalDate endDate) {
+        return (date.compareTo(startDate) >= 0) || ((date.compareTo(startDate) >= 0) && (date.compareTo(endDate) >= 0));
+    }
+
+    public boolean save(Task task) {
+        return tasks.add(task);
+    }
+
+    public boolean delete(Task task) {
+        return tasks.remove(task);
+    }
+
+    public Task findById(String taskId) {
+        for (Task t : tasks) {
+            if (t.getId().equals(taskId)) {
+                return t;
+            }
+        }
+        Task empty = null;
+        throw new NoSuchElementException();
     }
 
 }

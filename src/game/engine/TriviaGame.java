@@ -1,15 +1,16 @@
 package game.engine;
 
 import game.domain.*;
-import game.repository.QuestionRepository;
+import game.repository.QuestionRepositoryImpl;
 import game.service.QuestionService;
+import game.service.QuestionServiceImpl;
 
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 public class TriviaGame {
-    private final QuestionService questionService = new QuestionService(new QuestionRepository());
+    private final QuestionService questionService = new QuestionServiceImpl(new QuestionRepositoryImpl());
     private AskAudienceHelpOption askAudienceHelpOption = new AskAudienceHelpOption();
     private AskFriendHelpOption askFriendHelpOption = new AskFriendHelpOption();
     private FiftyFiftyHelpOption fiftyFiftyHelpOption = new FiftyFiftyHelpOption();
@@ -26,7 +27,7 @@ public class TriviaGame {
     public void startGame() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\t\t\t\tWelcome to Trivia Game");
+        System.out.println("--- Do you want to be a the Ultimate Trivia Man \uD83E\uDD13? ---");
         do {
             displayHelpOptionsMessage();
             pickQuestion();
@@ -43,7 +44,8 @@ public class TriviaGame {
     }
 
     private void displayHelpOptionsMessage() {
-        System.out.println(" //You have  " + numberOfHelpOptionsAvailable + " help options ( ASK a Friend - [H1], ASK Auditory - [H2], 50/50 - [H3])");
+        System.out.println(
+                "    [\u2753] You have  " + numberOfHelpOptionsAvailable + " help options ( ASK a Friend - [H1], ASK Auditory - [H2], 50/50 - [H3])");
     }
 
     private void initializeGame() {
@@ -77,10 +79,10 @@ public class TriviaGame {
             fiftyFiftyHelpOption.invoke(question);
             numberOfHelpOptionsAvailable--;
         } else {
-            System.out.println(" " + questionLevel + ". " + question.getText());
+            System.out.println("    [\uD83D\uDCCC] " + questionLevel + ". " + question.getText());
             List<Answer> answers = question.getAnswers();
             for (Answer answer : answers) {
-                System.out.println(" " + answer);
+                System.out.println("          \u2B55 " + answer);
             }
         }
 
@@ -91,24 +93,26 @@ public class TriviaGame {
         if (questionResponse.equalsIgnoreCase(currentQuestion.getCorrectAnswer().getLetter())) {
             questionLevel++;
             currentScore += currentQuestion.getScore();
-            System.out.println("Correct! Current score : " + currentScore);
+            System.out.println("    [\uD83E\uDD29] Yaaay! Current score : " + currentScore);
         } else if (questionResponse.equalsIgnoreCase("H1") && !askFriendHelpOption.isUsed()) {
             askFriendHelpOption.setInvoked(true);
         } else if (questionResponse.equalsIgnoreCase("H2") && !askAudienceHelpOption.isUsed()) {
             askAudienceHelpOption.setInvoked(true);
         } else if (questionResponse.equalsIgnoreCase("H3") && !fiftyFiftyHelpOption.isUsed()) {
             fiftyFiftyHelpOption.setInvoked(true);
-        } else if (questionResponse.equalsIgnoreCase("H1") || questionResponse.equalsIgnoreCase("H2") || questionResponse.equalsIgnoreCase("H3")) {
-            System.out.println("You`ve used all of your help options, now please respond.");
+        } else if (questionResponse.equalsIgnoreCase("H1") || questionResponse.equalsIgnoreCase(
+                "H2") || questionResponse.equalsIgnoreCase(
+                "H3")) {
+            System.out.println("     [\u2757] You`ve used all of your help options, now please respond.");
         } else {
-            System.out.println("Game Over!");
+            System.out.println("     [\uD83D\uDE22] Oopsie... Game Over!");
             gameOver = true;
         }
     }
 
     private void endGameWithCongratulations() {
-        System.out.println("You won!");
-        System.out.println("You got : " + currentScore);
+        System.out.println("    [\uD83E\uDD73] You won!");
+        System.out.println("    [\uD83E\uDD73] You got : " + currentScore);
         gameOver = true;
     }
 

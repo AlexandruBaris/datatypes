@@ -1,5 +1,6 @@
 package game.demo;
 
+import game.engine.TriviaAdmin;
 import game.engine.TriviaGame;
 
 import java.util.Scanner;
@@ -14,6 +15,8 @@ public class GameDemo {
             String decision = scanner.nextLine();
             if (decision.equalsIgnoreCase("START")) {
                 new TriviaGame().startGame();
+            } else if (decision.equalsIgnoreCase("ADMIN")) {
+                new TriviaAdmin().start();
             } else if (decision.equalsIgnoreCase("EXIT")) {
                 menuRunning = false;
             } else {

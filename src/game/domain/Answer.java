@@ -1,13 +1,25 @@
 package game.domain;
 
+import game.domain.exceptions.EmptyAnswerTextException;
+
 import java.util.Objects;
 
 public class Answer {
     private boolean isCorrect;
     private String text;
     private String letter;
+    private Long id;
+
+    private Question question;
+
+    public Answer(Long id, String text, boolean isCorrect, String letter) {
+        this(text, isCorrect, letter);
+        this.id = id;
+    }
 
     public Answer(String text, boolean isCorrect, String letter) {
+        if (text.isEmpty())
+            throw new EmptyAnswerTextException("Answer text should not be empty");
         this.text = text;
         this.isCorrect = isCorrect;
         this.letter = letter;
@@ -37,9 +49,25 @@ public class Answer {
         this.letter = letter;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(text, isCorrect, letter);
+        return Objects.hash(id, text, isCorrect, letter, question);
     }
 
     @Override
@@ -47,7 +75,9 @@ public class Answer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Answer answer = (Answer) o;
-        return isCorrect == answer.isCorrect && Objects.equals(text, answer.text) && Objects.equals(letter, answer.letter);
+        return isCorrect == answer.isCorrect && Objects.equals(id, answer.id) && Objects.equals(text,
+                answer.text) && Objects.equals(
+                letter, answer.letter) && Objects.equals(question, answer.question);
     }
 
     @Override
